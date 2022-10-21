@@ -19,6 +19,12 @@ def softmax(Z):
     return exp / exp.sum(axis=0)
 
 # initialization of parameters W,b with random numbers
+"""
+W1 refers to the weights between the input layer and the hidden layer
+b1 refers to the bias between the input layer and the hidden layer
+W2 refers to the weights between the hidden layer and the output layer
+b2 refers to the bias between the hidden layer and the output layer
+"""
 def init_params(size):
     W1 = np.random.rand(10,size) - 0.5
     b1 = np.random.rand(10,1) - 0.5
@@ -134,6 +140,9 @@ show_predictions(X_test.T, Y_test, W1, W2, b1, b2) """
 # increasing accuracy by decreasing the learning rate
 W1, W2, b1, b2 = model(X_train.T, Y_train, 0.05, 2000)
 show_predictions(X_test.T, Y_test, W1, W2, b1, b2)
+#line break
+print(" ")
+
 
 """
 how does learning rate affect the accuracy of the model?
